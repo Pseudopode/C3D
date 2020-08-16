@@ -1,0 +1,1619 @@
+body
+{
+   background-color: #91D7FF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#wb_middleShape
+{
+   transform: rotate(0deg);
+   transform-origin: 50% 50%;
+}
+#middleShape
+{
+   border-width: 0;
+   vertical-align: top;
+}
+#wb_bottomShape
+{
+   transform: rotate(0deg);
+   transform-origin: 50% 50%;
+}
+#bottomShape
+{
+   border-width: 0;
+   vertical-align: top;
+}
+#wb_topShape
+{
+   transform: rotate(0deg);
+   transform-origin: 50% 50%;
+}
+#topShape
+{
+   border-width: 0;
+   vertical-align: top;
+}
+#wb_RightShape
+{
+   transform: rotate(0deg);
+   transform-origin: 50% 50%;
+}
+#RightShape
+{
+   border-width: 0;
+   vertical-align: top;
+}
+#wb_LeftShape
+{
+   transform: rotate(0deg);
+   transform-origin: 50% 50%;
+}
+#LeftShape
+{
+   border-width: 0;
+   vertical-align: top;
+}
+#wb_objTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 2px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: center;
+}
+#wb_objTxt div
+{
+   text-align: center;
+}
+#FileInputBox
+{
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+   background-color: #FFFFFF;
+   background-image: none;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 18px;
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+   text-align: left;
+}
+#FileInputBox:focus
+{
+   border-color: #66AFE9;
+   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
+   outline: 0;
+}
+#FileInputBox::placeholder
+{
+   color: #DCDCDC;
+   opacity: 1;
+}
+#FileInputBox::-ms-input-placeholder
+{
+   color: #DCDCDC;
+}
+#wb_InputFileTxt 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_InputFileTxt div
+{
+   text-align: left;
+}
+#wb_AppHeaderTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 1px solid #808080;
+   border-radius: 5px;
+   padding: 5px 5px 5px 5px;
+   margin: 0;
+   text-align: center;
+}
+#wb_AppHeaderTxt div
+{
+   text-align: center;
+}
+#wb_objIcon
+{
+   vertical-align: top;
+}
+#objIcon
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_glbTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 2px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: center;
+}
+#wb_glbTxt div
+{
+   text-align: center;
+}
+#wb_glbIcon
+{
+   vertical-align: top;
+}
+#glbIcon
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_usdzIcon
+{
+   vertical-align: top;
+}
+#usdzIcon
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_usdzTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 2px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: center;
+}
+#wb_usdzTxt div
+{
+   text-align: center;
+}
+#wb_gltfTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 2px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: center;
+}
+#wb_gltfTxt div
+{
+   text-align: center;
+}
+#wb_gltfIcon
+{
+   vertical-align: top;
+}
+#gltfIcon
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_jpegCheckbox
+{
+   margin: 0;
+}
+#wb_jpegCheckbox, #wb_jpegCheckbox *, #wb_jpegCheckbox *::before, #wb_jpegCheckbox *::after
+{
+   box-sizing: border-box;
+}
+#wb_jpegCheckbox input[type='checkbox']
+{
+   position: absolute;
+   padding: 0;
+   margin: 0;
+   opacity: 0;
+   z-index: 1;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+}
+#wb_jpegCheckbox label
+{
+   display: inline-block;
+   vertical-align: middle;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0;
+   height: 0;
+   padding: 0;
+}
+#wb_jpegCheckbox label::before
+{
+   content: "";
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   background-color: #FFFFFF;
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+}
+#wb_jpegCheckbox label::after
+{
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   padding: 0;
+   text-align: center;
+   line-height: 20px;
+}
+#wb_jpegCheckbox input[type='checkbox']:checked + label::after
+{
+   content: " ";
+   background: url('data:image/svg+xml,%3csvg%20height%3d%2220%22%20width%3d%2220%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%3cg%20style%3d%22fill:%23FFFFFF%22%20transform%3d%22scale%280.0112%29%22%3e%0d%0a%3cpath%20transform%3d%22rotate%28180%29%20scale%28%2d1%2c1%29%20translate%280%2c%2d1536%29%22%20d%3d%22M1671%20970q0%20%2d40%20%2d28%20%2d68l%2d724%20%2d724l%2d136%20%2d136q%2d28%20%2d28%20%2d68%20%2d28t%2d68%2028l%2d136%20136l%2d362%20362q%2d28%2028%20%2d28%2068t28%2068l136%20136q28%2028%2068%2028t68%20%2d28l294%20%2d295l656%20657q28%2028%2068%2028t68%20%2d28l136%20%2d136q28%20%2d28%2028%20%2d68z%22/%3e%3c/g%3e%3c/svg%3e') no-repeat center center;
+   background-size: 80% 80%
+}
+#wb_jpegCheckbox input[type='checkbox']:checked + label::before
+{
+   background-color: #87CEFA;
+   background-image: none;
+   border-color: #87CEFA;
+}
+#wb_jpegCheckbox input[type='checkbox']:focus + label::before
+{
+   outline: thin dotted;
+}
+#wb_convertJPEGTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 2px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: center;
+}
+#wb_convertJPEGTxt div
+{
+   text-align: center;
+}
+#wb_ConvertTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 1px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: left;
+}
+#wb_ConvertTxt div
+{
+   text-align: left;
+}
+#wb_ParametersTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 1px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: left;
+}
+#wb_ParametersTxt div
+{
+   text-align: left;
+}
+#wb_objCheckbox
+{
+   margin: 0;
+}
+#wb_objCheckbox, #wb_objCheckbox *, #wb_objCheckbox *::before, #wb_objCheckbox *::after
+{
+   box-sizing: border-box;
+}
+#wb_objCheckbox input[type='checkbox']
+{
+   position: absolute;
+   padding: 0;
+   margin: 0;
+   opacity: 0;
+   z-index: 1;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+}
+#wb_objCheckbox label
+{
+   display: inline-block;
+   vertical-align: middle;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0;
+   height: 0;
+   padding: 0;
+}
+#wb_objCheckbox label::before
+{
+   content: "";
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   background-color: #FFFFFF;
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+}
+#wb_objCheckbox label::after
+{
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   padding: 0;
+   text-align: center;
+   line-height: 20px;
+}
+#wb_objCheckbox input[type='checkbox']:checked + label::after
+{
+   content: " ";
+   background: url('data:image/svg+xml,%3csvg%20height%3d%2220%22%20width%3d%2220%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%3cg%20style%3d%22fill:%23FFFFFF%22%20transform%3d%22scale%280.0112%29%22%3e%0d%0a%3cpath%20transform%3d%22rotate%28180%29%20scale%28%2d1%2c1%29%20translate%280%2c%2d1536%29%22%20d%3d%22M1671%20970q0%20%2d40%20%2d28%20%2d68l%2d724%20%2d724l%2d136%20%2d136q%2d28%20%2d28%20%2d68%20%2d28t%2d68%2028l%2d136%20136l%2d362%20362q%2d28%2028%20%2d28%2068t28%2068l136%20136q28%2028%2068%2028t68%20%2d28l294%20%2d295l656%20657q28%2028%2068%2028t68%20%2d28l136%20%2d136q28%20%2d28%2028%20%2d68z%22/%3e%3c/g%3e%3c/svg%3e') no-repeat center center;
+   background-size: 80% 80%
+}
+#wb_objCheckbox input[type='checkbox']:checked + label::before
+{
+   background-color: #87CEFA;
+   background-image: none;
+   border-color: #87CEFA;
+}
+#wb_objCheckbox input[type='checkbox']:focus + label::before
+{
+   outline: thin dotted;
+}
+#wb_gltfCheckbox
+{
+   margin: 0;
+}
+#wb_gltfCheckbox, #wb_gltfCheckbox *, #wb_gltfCheckbox *::before, #wb_gltfCheckbox *::after
+{
+   box-sizing: border-box;
+}
+#wb_gltfCheckbox input[type='checkbox']
+{
+   position: absolute;
+   padding: 0;
+   margin: 0;
+   opacity: 0;
+   z-index: 1;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+}
+#wb_gltfCheckbox label
+{
+   display: inline-block;
+   vertical-align: middle;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0;
+   height: 0;
+   padding: 0;
+}
+#wb_gltfCheckbox label::before
+{
+   content: "";
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   background-color: #FFFFFF;
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+}
+#wb_gltfCheckbox label::after
+{
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   padding: 0;
+   text-align: center;
+   line-height: 20px;
+}
+#wb_gltfCheckbox input[type='checkbox']:checked + label::after
+{
+   content: " ";
+   background: url('data:image/svg+xml,%3csvg%20height%3d%2220%22%20width%3d%2220%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%3cg%20style%3d%22fill:%23FFFFFF%22%20transform%3d%22scale%280.0112%29%22%3e%0d%0a%3cpath%20transform%3d%22rotate%28180%29%20scale%28%2d1%2c1%29%20translate%280%2c%2d1536%29%22%20d%3d%22M1671%20970q0%20%2d40%20%2d28%20%2d68l%2d724%20%2d724l%2d136%20%2d136q%2d28%20%2d28%20%2d68%20%2d28t%2d68%2028l%2d136%20136l%2d362%20362q%2d28%2028%20%2d28%2068t28%2068l136%20136q28%2028%2068%2028t68%20%2d28l294%20%2d295l656%20657q28%2028%2068%2028t68%20%2d28l136%20%2d136q28%20%2d28%2028%20%2d68z%22/%3e%3c/g%3e%3c/svg%3e') no-repeat center center;
+   background-size: 80% 80%
+}
+#wb_gltfCheckbox input[type='checkbox']:checked + label::before
+{
+   background-color: #87CEFA;
+   background-image: none;
+   border-color: #87CEFA;
+}
+#wb_gltfCheckbox input[type='checkbox']:focus + label::before
+{
+   outline: thin dotted;
+}
+#wb_glbCheckbox
+{
+   margin: 0;
+}
+#wb_glbCheckbox, #wb_glbCheckbox *, #wb_glbCheckbox *::before, #wb_glbCheckbox *::after
+{
+   box-sizing: border-box;
+}
+#wb_glbCheckbox input[type='checkbox']
+{
+   position: absolute;
+   padding: 0;
+   margin: 0;
+   opacity: 0;
+   z-index: 1;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+}
+#wb_glbCheckbox label
+{
+   display: inline-block;
+   vertical-align: middle;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0;
+   height: 0;
+   padding: 0;
+}
+#wb_glbCheckbox label::before
+{
+   content: "";
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   background-color: #FFFFFF;
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+}
+#wb_glbCheckbox label::after
+{
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   padding: 0;
+   text-align: center;
+   line-height: 20px;
+}
+#wb_glbCheckbox input[type='checkbox']:checked + label::after
+{
+   content: " ";
+   background: url('data:image/svg+xml,%3csvg%20height%3d%2220%22%20width%3d%2220%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%3cg%20style%3d%22fill:%23FFFFFF%22%20transform%3d%22scale%280.0112%29%22%3e%0d%0a%3cpath%20transform%3d%22rotate%28180%29%20scale%28%2d1%2c1%29%20translate%280%2c%2d1536%29%22%20d%3d%22M1671%20970q0%20%2d40%20%2d28%20%2d68l%2d724%20%2d724l%2d136%20%2d136q%2d28%20%2d28%20%2d68%20%2d28t%2d68%2028l%2d136%20136l%2d362%20362q%2d28%2028%20%2d28%2068t28%2068l136%20136q28%2028%2068%2028t68%20%2d28l294%20%2d295l656%20657q28%2028%2068%2028t68%20%2d28l136%20%2d136q28%20%2d28%2028%20%2d68z%22/%3e%3c/g%3e%3c/svg%3e') no-repeat center center;
+   background-size: 80% 80%
+}
+#wb_glbCheckbox input[type='checkbox']:checked + label::before
+{
+   background-color: #87CEFA;
+   background-image: none;
+   border-color: #87CEFA;
+}
+#wb_glbCheckbox input[type='checkbox']:focus + label::before
+{
+   outline: thin dotted;
+}
+#wb_usdzCheckbox
+{
+   margin: 0;
+}
+#wb_usdzCheckbox, #wb_usdzCheckbox *, #wb_usdzCheckbox *::before, #wb_usdzCheckbox *::after
+{
+   box-sizing: border-box;
+}
+#wb_usdzCheckbox input[type='checkbox']
+{
+   position: absolute;
+   padding: 0;
+   margin: 0;
+   opacity: 0;
+   z-index: 1;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+}
+#wb_usdzCheckbox label
+{
+   display: inline-block;
+   vertical-align: middle;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0;
+   height: 0;
+   padding: 0;
+}
+#wb_usdzCheckbox label::before
+{
+   content: "";
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   background-color: #FFFFFF;
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+}
+#wb_usdzCheckbox label::after
+{
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   padding: 0;
+   text-align: center;
+   line-height: 20px;
+}
+#wb_usdzCheckbox input[type='checkbox']:checked + label::after
+{
+   content: " ";
+   background: url('data:image/svg+xml,%3csvg%20height%3d%2220%22%20width%3d%2220%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%3cg%20style%3d%22fill:%23FFFFFF%22%20transform%3d%22scale%280.0112%29%22%3e%0d%0a%3cpath%20transform%3d%22rotate%28180%29%20scale%28%2d1%2c1%29%20translate%280%2c%2d1536%29%22%20d%3d%22M1671%20970q0%20%2d40%20%2d28%20%2d68l%2d724%20%2d724l%2d136%20%2d136q%2d28%20%2d28%20%2d68%20%2d28t%2d68%2028l%2d136%20136l%2d362%20362q%2d28%2028%20%2d28%2068t28%2068l136%20136q28%2028%2068%2028t68%20%2d28l294%20%2d295l656%20657q28%2028%2068%2028t68%20%2d28l136%20%2d136q28%20%2d28%2028%20%2d68z%22/%3e%3c/g%3e%3c/svg%3e') no-repeat center center;
+   background-size: 80% 80%
+}
+#wb_usdzCheckbox input[type='checkbox']:checked + label::before
+{
+   background-color: #87CEFA;
+   background-image: none;
+   border-color: #87CEFA;
+}
+#wb_usdzCheckbox input[type='checkbox']:focus + label::before
+{
+   outline: thin dotted;
+}
+#wb_qualityJPEGTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 2px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: center;
+}
+#wb_qualityJPEGTxt div
+{
+   text-align: center;
+}
+#JPEGQuality
+{
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+   background-color: #FFFFFF;
+   background-image: none;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 28px;
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+   text-align: left;
+}
+#JPEGQuality:focus
+{
+   border-color: #66AFE9;
+   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
+   outline: 0;
+}
+#wb_shadowPlaneCheckbox
+{
+   margin: 0;
+}
+#wb_shadowPlaneCheckbox, #wb_shadowPlaneCheckbox *, #wb_shadowPlaneCheckbox *::before, #wb_shadowPlaneCheckbox *::after
+{
+   box-sizing: border-box;
+}
+#wb_shadowPlaneCheckbox input[type='checkbox']
+{
+   position: absolute;
+   padding: 0;
+   margin: 0;
+   opacity: 0;
+   z-index: 1;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+}
+#wb_shadowPlaneCheckbox label
+{
+   display: inline-block;
+   vertical-align: middle;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0;
+   height: 0;
+   padding: 0;
+}
+#wb_shadowPlaneCheckbox label::before
+{
+   content: "";
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   background-color: #FFFFFF;
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+}
+#wb_shadowPlaneCheckbox label::after
+{
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   padding: 0;
+   text-align: center;
+   line-height: 20px;
+}
+#wb_shadowPlaneCheckbox input[type='checkbox']:checked + label::after
+{
+   content: " ";
+   background: url('data:image/svg+xml,%3csvg%20height%3d%2220%22%20width%3d%2220%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%3cg%20style%3d%22fill:%23FFFFFF%22%20transform%3d%22scale%280.0112%29%22%3e%0d%0a%3cpath%20transform%3d%22rotate%28180%29%20scale%28%2d1%2c1%29%20translate%280%2c%2d1536%29%22%20d%3d%22M1671%20970q0%20%2d40%20%2d28%20%2d68l%2d724%20%2d724l%2d136%20%2d136q%2d28%20%2d28%20%2d68%20%2d28t%2d68%2028l%2d136%20136l%2d362%20362q%2d28%2028%20%2d28%2068t28%2068l136%20136q28%2028%2068%2028t68%20%2d28l294%20%2d295l656%20657q28%2028%2068%2028t68%20%2d28l136%20%2d136q28%20%2d28%2028%20%2d68z%22/%3e%3c/g%3e%3c/svg%3e') no-repeat center center;
+   background-size: 80% 80%
+}
+#wb_shadowPlaneCheckbox input[type='checkbox']:checked + label::before
+{
+   background-color: #87CEFA;
+   background-image: none;
+   border-color: #87CEFA;
+}
+#wb_shadowPlaneCheckbox input[type='checkbox']:focus + label::before
+{
+   outline: thin dotted;
+}
+#wb_shadowPlaneTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 2px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: center;
+}
+#wb_shadowPlaneTxt div
+{
+   text-align: center;
+}
+#ConvertBtn
+{
+   border: 1px outset #808080;
+   border-radius: 4px;
+   background-color: #D3D3D3;
+   background-image: none;
+   color: #000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 24px;
+   -webkit-appearance: none;
+   margin: 0;
+}
+#FileInputBtn
+{
+   border: 1px outset #808080;
+   border-radius: 4px;
+   background-color: #D3D3D3;
+   background-image: none;
+   color: #000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 19px;
+   -webkit-appearance: none;
+   margin: 0;
+}
+#wb_glassTranspCheckbox
+{
+   margin: 0;
+}
+#wb_glassTranspCheckbox, #wb_glassTranspCheckbox *, #wb_glassTranspCheckbox *::before, #wb_glassTranspCheckbox *::after
+{
+   box-sizing: border-box;
+}
+#wb_glassTranspCheckbox input[type='checkbox']
+{
+   position: absolute;
+   padding: 0;
+   margin: 0;
+   opacity: 0;
+   z-index: 1;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+}
+#wb_glassTranspCheckbox label
+{
+   display: inline-block;
+   vertical-align: middle;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0;
+   height: 0;
+   padding: 0;
+}
+#wb_glassTranspCheckbox label::before
+{
+   content: "";
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   background-color: #FFFFFF;
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+}
+#wb_glassTranspCheckbox label::after
+{
+   display: inline-block;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   top: 0;
+   padding: 0;
+   text-align: center;
+   line-height: 20px;
+}
+#wb_glassTranspCheckbox input[type='checkbox']:checked + label::after
+{
+   content: " ";
+   background: url('data:image/svg+xml,%3csvg%20height%3d%2220%22%20width%3d%2220%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%3cg%20style%3d%22fill:%23FFFFFF%22%20transform%3d%22scale%280.0112%29%22%3e%0d%0a%3cpath%20transform%3d%22rotate%28180%29%20scale%28%2d1%2c1%29%20translate%280%2c%2d1536%29%22%20d%3d%22M1671%20970q0%20%2d40%20%2d28%20%2d68l%2d724%20%2d724l%2d136%20%2d136q%2d28%20%2d28%20%2d68%20%2d28t%2d68%2028l%2d136%20136l%2d362%20362q%2d28%2028%20%2d28%2068t28%2068l136%20136q28%2028%2068%2028t68%20%2d28l294%20%2d295l656%20657q28%2028%2068%2028t68%20%2d28l136%20%2d136q28%20%2d28%2028%20%2d68z%22/%3e%3c/g%3e%3c/svg%3e') no-repeat center center;
+   background-size: 80% 80%
+}
+#wb_glassTranspCheckbox input[type='checkbox']:checked + label::before
+{
+   background-color: #87CEFA;
+   background-image: none;
+   border-color: #87CEFA;
+}
+#wb_glassTranspCheckbox input[type='checkbox']:focus + label::before
+{
+   outline: thin dotted;
+}
+#wb_glassTransparencyTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 2px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: center;
+}
+#wb_glassTransparencyTxt div
+{
+   text-align: center;
+}
+#wb_alphaTxt 
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 2px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: center;
+}
+#wb_alphaTxt div
+{
+   text-align: center;
+}
+#alphaGlassEditbox
+{
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+   background-color: #FFFFFF;
+   background-image: none;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 28px;
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+   text-align: left;
+}
+#alphaGlassEditbox:focus
+{
+   border-color: #66AFE9;
+   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
+   outline: 0;
+}
+#FileUpload *
+{
+   box-sizing: border-box;
+}
+#FileUpload{
+   display: table;
+   border-collapse: separate;
+   margin: 0;
+}
+#FileUpload .form-control
+{
+   display: block;
+   width: 100%;
+   height: 33px;
+   line-height: 25px;
+   padding: 4px 4px 4px 4px;
+   font-family:Verdana;
+   font-weight: normal;
+   font-size: 19px;
+   color: #555555;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+}
+#FileUpload .form-control
+{
+   position: relative;
+   z-index: 2;
+   float: left;
+   width: 100%;
+   margin-bottom: 0px;
+}
+#FileUpload label
+{
+   display: inline-block;
+   margin-bottom: 5px;
+   font-weight: 700;
+}
+#FileUpload .input-group-btn, FileUpload .form-control
+{
+   display: table-cell;
+}
+#FileUpload :first-child.form-control, FileUpload :first-child.input-group-btn > .btn, FileUpload :first-child.input-group-btn > .btn-group > .btn, FileUpload :last-child.input-group-btn > :not(:last-child):not(.dropdown-toggle).btn, FileUpload :last-child.input-group-btn > :not(:last-child).btn-group > .btn
+{
+   border-bottom-right-radius: 0px;
+   border-top-right-radius: 0px;
+}
+#FileUpload .input-group-btn
+{
+   width: 1%;
+   white-space: nowrap;
+   vertical-align: middle;
+   position: relative;
+   font-size: 0px;
+   white-space: nowrap;
+}
+#FileUpload .btn
+{
+   display: inline-block;
+   margin-bottom: 0px;
+   font-weight: 400;
+   text-align: center;
+   vertical-align: middle;
+   cursor: pointer;
+   background-color: #428BCA;
+   background-image: none;
+   border: 1px solid #357EBD;
+   color: #FFFFFF;
+   white-space: nowrap;
+   padding: 4px 8px 4px 8px;
+   font-family:Verdana;
+   font-weight: normal;
+   font-size: 19px;
+   line-height: 25px;
+   border-radius: 4px;
+   height: 33px;
+}
+#FileUpload .input-group-btn > .btn
+{
+   position: relative;
+}
+#FileUpload :last-child.form-control, #FileUpload :last-child.input-group-btn > .btn, #FileUpload :last-child.input-group-btn > .btn-group > .btn, #FileUpload :first-child.input-group-btn > :not(:first-child).btn, FileUpload :first-child.input-group-btn > :not(:first-child).btn-group > .btn
+{
+   border-bottom-left-radius: 0px;
+   border-top-left-radius: 0px;
+}
+#FileUpload :last-child.input-group-btn > .btn, FileUpload :last-child.input-group-btn > .btn-group
+{
+   margin-left: -1px;
+}
+#wb_VersionNumberText 
+{
+   background-color: #DCDCDC;
+   background-image: none;
+   border: 1px solid transparent;
+   border-radius: 5px;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: center;
+}
+#wb_VersionNumberText div
+{
+   text-align: center;
+}
+#wb_
+{
+   transform: rotate(0deg);
+   transform-origin: 50% 50%;
+}
+#
+{
+   border-width: 0;
+   vertical-align: top;
+}
+#FolderOutputBox
+{
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+   background-color: #FFFFFF;
+   background-image: none;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 18px;
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+   text-align: left;
+}
+#FolderOutputBox:focus
+{
+   border-color: #66AFE9;
+   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
+   outline: 0;
+}
+#FolderOutputBox::placeholder
+{
+   color: #DCDCDC;
+   opacity: 1;
+}
+#FolderOutputBox::-ms-input-placeholder
+{
+   color: #DCDCDC;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text1 div
+{
+   text-align: left;
+}
+#FolderOutputBtn
+{
+   border: 1px outset #808080;
+   border-radius: 4px;
+   background-color: #D3D3D3;
+   background-image: none;
+   color: #000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 19px;
+   -webkit-appearance: none;
+   margin: 0;
+}
+#FolderOutputBtn
+{
+   position: absolute;
+   left: 718px;
+   top: 116px;
+   width: 235px;
+   height: 34px;
+   z-index: 42;
+}
+#
+{
+   width: 953px;
+   height: 42px;
+}
+#JPEGQuality
+{
+   position: absolute;
+   left: 894px;
+   top: 282px;
+   width: 38px;
+   height: 28px;
+   z-index: 25;
+}
+#wb_glbIcon
+{
+   position: absolute;
+   left: 98px;
+   top: 447px;
+   width: 46px;
+   height: 64px;
+   z-index: 11;
+}
+#wb_uid1
+{
+   color: #000000;
+   font-family: "Verdana";
+   font-size: 16px;
+}
+#wb_InputFileTxt
+{
+   position: absolute;
+   left: 33px;
+   top: 74px;
+   width: 91px;
+   height: 19px;
+   z-index: 7;
+}
+#wb_topShape
+{
+   position: absolute;
+   left: 17px;
+   top: 62px;
+   width: 953px;
+   height: 42px;
+   z-index: 2;
+}
+#wb_Text1
+{
+   position: absolute;
+   left: 32px;
+   top: 124px;
+   width: 127px;
+   height: 19px;
+   z-index: 41;
+}
+#wb_usdzIcon
+{
+   position: absolute;
+   left: 98px;
+   top: 533px;
+   width: 46px;
+   height: 64px;
+   z-index: 12;
+}
+#wb_uid2
+{
+   color: #000000;
+   font-family: "Verdana";
+   font-size: 27px;
+}
+#wb_glassTranspCheckbox
+{
+   position: absolute;
+   left: 400px;
+   top: 478px;
+   width: 20px;
+   height: 20px;
+   z-index: 30;
+}
+#wb_usdzCheckbox
+{
+   position: absolute;
+   left: 48px;
+   top: 555px;
+   width: 20px;
+   height: 20px;
+   z-index: 23;
+}
+#wb_jpegCheckbox
+{
+   position: absolute;
+   left: 400px;
+   top: 291px;
+   width: 20px;
+   height: 20px;
+   z-index: 16;
+}
+#wb_uid3
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 19px;
+}
+#wb_AppHeaderTxt
+{
+   position: absolute;
+   left: 7px;
+   top: 6px;
+   width: 963px;
+   height: 32px;
+   text-align: center;
+   z-index: 8;
+}
+#middleShape
+{
+   width: 963px;
+   height: 469px;
+}
+#shadowPlaneCheckbox
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+#wb_gltfCheckbox
+{
+   position: absolute;
+   left: 48px;
+   top: 380px;
+   width: 20px;
+   height: 20px;
+   z-index: 21;
+}
+#wb_ParametersTxt
+{
+   position: absolute;
+   left: 400px;
+   top: 189px;
+   width: 531px;
+   height: 26px;
+   z-index: 19;
+}
+#wb_uid4
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 19px;
+}
+#wb_middleShape
+{
+   position: absolute;
+   left: 12px;
+   top: 176px;
+   width: 963px;
+   height: 469px;
+   z-index: 0;
+}
+#objCheckbox
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+#wb_uid5
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 19px;
+}
+#topShape
+{
+   width: 953px;
+   height: 42px;
+}
+#wb_objCheckbox
+{
+   position: absolute;
+   left: 48px;
+   top: 291px;
+   width: 20px;
+   height: 20px;
+   z-index: 20;
+}
+#wb_uid6
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 16px;
+}
+#wb_gltfTxt
+{
+   position: absolute;
+   left: 173px;
+   top: 367px;
+   width: 160px;
+   height: 23px;
+   text-align: center;
+   z-index: 14;
+}
+#FileInputBox
+{
+   position: absolute;
+   left: 124px;
+   top: 69px;
+   width: 571px;
+   height: 18px;
+   z-index: 6;
+}
+#FileUpload-file
+{
+   display: none;
+}
+#alphaGlassEditbox
+{
+   position: absolute;
+   left: 894px;
+   top: 469px;
+   width: 38px;
+   height: 28px;
+   z-index: 33;
+}
+#wb_shadowPlaneTxt
+{
+   position: absolute;
+   left: 429px;
+   top: 377px;
+   width: 278px;
+   height: 19px;
+   text-align: center;
+   z-index: 27;
+}
+#usdzCheckbox
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+#glbCheckbox
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+#wb_uid7
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 21px;
+}
+#jpegCheckbox
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+#wb_usdzTxt
+{
+   position: absolute;
+   left: 173px;
+   top: 542px;
+   width: 160px;
+   height: 23px;
+   text-align: center;
+   z-index: 13;
+}
+#wb_alphaTxt
+{
+   position: absolute;
+   left: 750px;
+   top: 467px;
+   width: 110px;
+   height: 19px;
+   text-align: center;
+   z-index: 32;
+}
+#FileInputBtn
+{
+   position: absolute;
+   left: 719px;
+   top: 66px;
+   width: 235px;
+   height: 34px;
+   z-index: 29;
+}
+#wb_glbCheckbox
+{
+   position: absolute;
+   left: 48px;
+   top: 469px;
+   width: 20px;
+   height: 20px;
+   z-index: 22;
+}
+#gltfCheckbox
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+#wb_uid8
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 21px;
+}
+#wb_objIcon
+{
+   position: absolute;
+   left: 98px;
+   top: 269px;
+   width: 46px;
+   height: 64px;
+   z-index: 9;
+}
+#wb_objTxt
+{
+   position: absolute;
+   left: 173px;
+   top: 278px;
+   width: 160px;
+   height: 23px;
+   text-align: center;
+   z-index: 5;
+}
+#wb_uid10
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 16px;
+}
+#wb_uid9
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 16px;
+}
+#wb_RightShape
+{
+   position: absolute;
+   left: 390px;
+   top: 184px;
+   width: 575px;
+   height: 445px;
+   z-index: 3;
+}
+#wb_uid11
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 16px;
+}
+#glassTranspCheckbox
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+#wb_qualityJPEGTxt
+{
+   position: absolute;
+   left: 750px;
+   top: 278px;
+   width: 110px;
+   height: 19px;
+   text-align: center;
+   z-index: 24;
+}
+#wb_LeftShape
+{
+   position: absolute;
+   left: 22px;
+   top: 184px;
+   width: 360px;
+   height: 445px;
+   z-index: 4;
+}
+#bottomShape
+{
+   width: 953px;
+   height: 42px;
+}
+#wb_VersionNumberText
+{
+   position: absolute;
+   left: 919px;
+   top: 11px;
+   width: 35px;
+   height: 13px;
+   text-align: center;
+   z-index: 38;
+}
+#wb_uid12
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 16px;
+}
+#wb_ConvertTxt
+{
+   position: absolute;
+   left: 33px;
+   top: 189px;
+   width: 317px;
+   height: 26px;
+   z-index: 18;
+}
+#wb_bottomShape
+{
+   position: absolute;
+   left: 16px;
+   top: 645px;
+   width: 953px;
+   height: 42px;
+   z-index: 1;
+}
+#wb_uid13
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 11px;
+}
+#wb_gltfIcon
+{
+   position: absolute;
+   left: 98px;
+   top: 358px;
+   width: 46px;
+   height: 64px;
+   z-index: 15;
+}
+#wb_uid14
+{
+   color: #000000;
+   font-family: "Verdana";
+   font-size: 16px;
+}
+#ConvertBtn
+{
+   position: absolute;
+   left: 376px;
+   top: 649px;
+   width: 235px;
+   height: 34px;
+   z-index: 28;
+}
+#browser-bak
+{
+   background-color: red;
+   position: absolute;
+   top: 600px;
+   left: 1200px;
+   width: 600px;
+   height: 400px;
+   border: 1px solid gray;
+}
+#wb_shadowPlaneCheckbox
+{
+   position: absolute;
+   left: 400px;
+   top: 388px;
+   width: 20px;
+   height: 20px;
+   z-index: 26;
+}
+#wb_convertJPEGTxt
+{
+   position: absolute;
+   left: 429px;
+   top: 278px;
+   width: 278px;
+   height: 19px;
+   text-align: center;
+   z-index: 17;
+}
+#RightShape
+{
+   width: 575px;
+   height: 445px;
+}
+#wb_
+{
+   position: absolute;
+   left: 16px;
+   top: 112px;
+   width: 953px;
+   height: 42px;
+   z-index: 39;
+}
+#LeftShape
+{
+   width: 360px;
+   height: 445px;
+}
+#FolderOutputBox
+{
+   position: absolute;
+   left: 159px;
+   top: 119px;
+   width: 535px;
+   height: 18px;
+   z-index: 40;
+}
+#FileUpload
+{
+   position: absolute;
+   left: 7px;
+   top: 644px;
+   width: 836px;
+   visibility: hidden;
+   height: 33px;
+   z-index: 36;
+}
+#wb_glassTransparencyTxt
+{
+   position: absolute;
+   left: 429px;
+   top: 467px;
+   width: 278px;
+   height: 19px;
+   text-align: center;
+   z-index: 31;
+}
+#wb_glbTxt
+{
+   position: absolute;
+   left: 173px;
+   top: 456px;
+   width: 160px;
+   height: 23px;
+   text-align: center;
+   z-index: 10;
+}
+#wb_uid0
+{
+   color: #4F4F4F;
+   font-family: "Verdana";
+   font-size: 19px;
+}

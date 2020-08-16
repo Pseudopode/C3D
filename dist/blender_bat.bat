@@ -1,0 +1,1 @@
+".\blender_281\blender.exe" -noaudio --background --python "fbx_2_other.py" -- "%1" %2

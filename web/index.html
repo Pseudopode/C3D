@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<link href="blender_app_test_1.0.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#FileUpload :file").on('change', function()
+   {
+      var input = $(this).parents('.input-group').find(':text');
+      input.val($(this).val());
+   });
+});
+</script>
+<script type='text/javascript' src='/eel.js'></script>
+<script>
+
+objSelected = false;
+usdzSelected = false;
+glbSelected = false;
+gltfSelected = false;
+removeShadowPlaneSelected = false;
+glassTranspSelected = false;
+glassTranspValue = 1.0;
+img2jpegSelected = false;
+
+async function pick_file() {
+	let folder = document.getElementById('input-box').value;
+	let file_div = document.getElementById('file-name');
+	
+	// Call into Python so we can access the file system
+	let random_filename = await eel.pick_file(folder)();
+	file_div.innerHTML = random_filename;
+}
+
+//async function apply_blender_conv(file_format)
+async function ConvertFileBtnClicked(file_format)
+{
+	//console.log('File format: ' + file_format)
+	//let folder = document.getElementById('input-box').value;
+	let element = document.getElementById('FileInputBox');
+	let fileinput = element.value;
+	//let file_div = document.getElementById('file-name');
+	
+	let ret = await eel.setOBJFileFormat(objSelected);
+	ret = await eel.setGLBFileFormat(glbSelected);
+	ret = await eel.setGLTFFileFormat(gltfSelected);
+	ret = await eel.setUSDZFileFormat(usdzSelected);
+	ret = await eel.setShadowPlaneIsRemoved(removeShadowPlaneSelected);
+	ret = await eel.setGlassTransparencyValue(glassTranspSelected);
+	console.log('glassTranspValue: ' + glassTranspValue)
+	ret = await eel.setOverwriteGlassTransparencyValue(glassTranspValue);
+	ret = await eel.setTexturesToJPEG(img2jpegSelected);
+	
+	//check if the filename isn't a folder
+	if(element.value.endsWith('/') || element.value.endsWith('\\'))
+	   alert('You provided a folder, not a file. You need to choose a file!')
+	// Call into Python so we can access the file system
+	//let random_filename = await eel.apply_blender_conv(fileinput,file_format)();
+	else
+	   return_val = await eel.apply_blender_conv(fileinput);
+	//file_div.innerHTML = random_filename;
+}
+
+
+function validateInputPath(e){
+	if(e.keyCode === 13){
+		e.preventDefault(); // Ensure it is only this code that rusn
+
+		alert("Enter was pressed");
+	}
+}
+
+async function ChooseFileClicked() {
+   var choosen_filepath = await eel.btn_ChooseFilePathClick()();
+	if (choosen_filepath) {
+		console.log(choosen_filepath);
+		document.getElementById('FileInputBox').value = choosen_filepath;
+	}
+}
+
+async function ChooseFolderOutputClicked() {
+   var choosen_folderpath = await eel.btn_ChooseOutputFolderPathClick()();
+	if (choosen_folderpath) {
+		console.log(choosen_folderpath);
+		document.getElementById('FolderOutputBox').value = choosen_folderpath;
+		await eel.setOutputFolder(choosen_folderpath);
+	}
+}
+
+function checkNoFileFormatSelected()
+{
+   var oneObjectSelected = objSelected | glbSelected | gltfSelected | usdzSelected;
+   
+   let element = document.getElementById('FileInputBox');
+   let fileinput = element.value;
+   
+   if(oneObjectSelected && fileinput != "")
+      enableExportBtn();
+   else
+      disableExportBtn();
+   
+   return oneObjectSelected;
+}
+
+//from https://stackoverflow.com/questions/32438068/perform-an-action-on-checkbox-checked-or-unchecked-event-on-html-form/59233171#59233171
+function bindEventCallbackOnCheckboxes() {
+    var objChckbx = document.getElementById('wb_objCheckbox');
+
+    // input.addEventListener('change', function() { ... });
+    // or
+    // input.onchange = function() { ... };
+    objChckbx.addEventListener('change', function() {
+        if (objSelected == false) {
+            console.log('OBJ fileformat selected');
+            objChckbx.checked = true;
+            objSelected = true;
+        } else {
+            console.log('OBJ fileformat deselected');
+            objChckbx.checked = false;
+            objSelected = false;
+        }
+        checkNoFileFormatSelected();
+    });
+    
+    var glbChckbx = document.getElementById('wb_glbCheckbox');
+
+    glbChckbx.addEventListener('change', function() {
+        if (glbSelected == false) {
+            console.log('GLB fileformat selected');
+             glbChckbx.checked = true;
+            glbSelected = true;
+        } else {
+            console.log('GLB fileformat deselected');
+             glbChckbx.checked = false;
+            glbSelected = false;
+        }
+        checkNoFileFormatSelected();
+    });
+    
+    var gltfChckbx = document.getElementById('wb_gltfCheckbox');
+
+    gltfChckbx.addEventListener('change', function() {
+        if (gltfSelected == false) {
+            console.log('GLTF fileformat selected');
+            gltfChckbx.checked = true;
+            gltfSelected = true;
+        } else {
+            console.log('GLTF fileformat deselected');
+            gltfChckbx.checked = false;
+            gltfSelected = false;
+        }
+        checkNoFileFormatSelected();
+    });
+    
+    var usdzChckbx = document.getElementById('wb_usdzCheckbox');
+
+    usdzChckbx.addEventListener('change', function() {
+        if (usdzSelected == false) {
+            console.log('USDZ fileformat selected');
+            gltfChckbx.checked = true;
+            usdzSelected = true;
+        } else {
+            console.log('USDZ fileformat deselected');
+            gltfChckbx.checked = false;
+            usdzSelected = false;
+        }
+        checkNoFileFormatSelected();
+    });
+    
+    shadowPlaneCheckbox.addEventListener('change', function() {
+        if (removeShadowPlaneSelected == false) {
+            console.log('Remove shadow planes selected');
+            shadowPlaneCheckbox.checked = true;
+            removeShadowPlaneSelected = true;
+        } else {
+            console.log('Remove shadow planes  deselected');
+            shadowPlaneCheckbox.checked = false;
+            removeShadowPlaneSelected = false;
+        }
+    });
+    
+    var glassTranspChckbx = document.getElementById('glassTranspCheckbox');
+    
+    glassTranspChckbx.addEventListener('change', function() {
+        if (glassTranspSelected == false) {
+            console.log('Change Glass Transparency selected');
+            glassTranspChckbx.checked = true;
+            glassTranspSelected = true;
+            glassTranspValue = alphaGlassEditbox.value;
+            console.log('Transparency value for glass: ' + glassTranspValue);
+        } else {
+            console.log('Change Glass Transparency deselected');
+            glassTranspChckbx.checked = false;
+            glassTranspSelected = false;
+        }
+
+    });
+    
+    var img2JPEGChckbx = document.getElementById('jpegCheckbox');
+    
+    img2JPEGChckbx.addEventListener('change', function() {
+        if (img2jpegSelected == false) {
+            console.log('Set IMG to JPEG selected');
+            img2JPEGChckbx.checked = true;
+            img2jpegSelected = true;
+        } else {
+            console.log('Set IMG to JPEG deselected');
+            img2JPEGChckbx.checked = false;
+            img2jpegSelected = false;
+        }
+
+    });
+    
+	
+	var FileInputBtn = document.getElementById('FileInputBtn');
+    
+    /*FileInputBtn.addEventListener('onclick', function() {
+       ChooseFileClicked();
+    }
+	
+	var FolderOutputBtn = document.getElementById('FolderOutputBtn');
+    
+    FolderOutputBtn.addEventListener('onclick', function() {
+       ChooseFolderOutputClicked();
+    }*/
+}
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function validateGlassTransparencyValue()
+{
+   var text_value = document.getElementById("JPEGQuality").value;
+   //alert(text_value);
+   // remove whitespaces
+   var text_value = input.replace(/\s+/g,"");
+   text_value = text_value.replace(",",".");
+   if(!isNumber(text_value))
+   {
+      alert('You must enter a valid float value for glass transparency!')
+      document.getElementById("JPEGQuality").value = 0.5;
+   }
+   else
+   {
+      glassTranspValue = parseFloat(text_value);
+   }
+}
+
+function disableExportBtn()
+{
+   let convertBtn = document.getElementById('ConvertBtn');
+   convertBtn.style = "color:gray";
+   convertBtn.disabled = true;
+}
+
+function enableExportBtn()
+{
+   let convertBtn = document.getElementById('ConvertBtn');
+   convertBtn.style = "color:black";
+   convertBtn.disabled = false;
+}
+
+function init()
+{
+   bindEventCallbackOnCheckboxes();
+   disableExportBtn();
+}
+
+//window.onload = init();
+$(window).on('load', function(){
+   init();
+});
+</script>
+<script src="./js/script.js"></script>
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/jquery.filebrowser-src.js"></script>
+<link href="./js/jquery.filebrowser-src.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="wb_middleShape">
+<img src="images/img0001.png" id="middleShape" alt=""></div>
+<div id="wb_bottomShape">
+<img src="images/img0002.png" id="bottomShape" alt=""></div>
+<div id="wb_topShape">
+<img src="images/img0003.png" id="topShape" alt=""></div>
+<div id="wb_RightShape">
+<img src="images/img0004.png" id="RightShape" alt=""></div>
+<div id="wb_LeftShape">
+<img src="images/img0005.png" id="LeftShape" alt=""></div>
+<div id="wb_objTxt" onclick="apply_blender_conv('OBJ');return false;">
+<span id="wb_uid0">OBJ</span></div>
+<input type="text" id="FileInputBox" onkeypress="validateInputPath(event);return false;" name="FileInputBox" value="" spellcheck="false" placeholder="Choose a File as Input...">
+<div id="wb_InputFileTxt">
+<span id="wb_uid1">Input file:</span></div>
+<div id="wb_AppHeaderTxt">
+<span id="wb_uid2">3D File Converter</span></div>
+<div id="wb_objIcon">
+<img src="images/icon_obj.png" id="objIcon" alt=""></div>
+<div id="wb_glbTxt" onclick="apply_blender_conv('GLB');return false;">
+<span id="wb_uid3">GLB</span></div>
+<div id="wb_glbIcon">
+<img src="images/icon_glb.png" id="glbIcon" alt=""></div>
+<div id="wb_usdzIcon">
+<img src="images/usdz.png" id="usdzIcon" alt=""></div>
+<div id="wb_usdzTxt" onclick="apply_blender_conv('USDZ');return false;">
+<span id="wb_uid4">USDZ</span></div>
+<div id="wb_gltfTxt" onclick="apply_blender_conv('GLTF');return false;">
+<span id="wb_uid5">GLTF</span></div>
+<div id="wb_gltfIcon">
+<img src="images/icon_glb.png" id="gltfIcon" alt=""></div>
+<div id="wb_jpegCheckbox">
+<input type="checkbox" id="jpegCheckbox" name="Checkbox1" value="on"><label for="jpegCheckbox"></label></div>
+<div id="wb_convertJPEGTxt" onclick="apply_blender_conv('OBJ');return false;">
+<span id="wb_uid6">Convert texture to JPEG</span></div>
+<div id="wb_ConvertTxt" onclick="apply_blender_conv('OBJ');return false;">
+<span id="wb_uid7">Convert input file to:</span></div>
+<div id="wb_ParametersTxt" onclick="apply_blender_conv('OBJ');return false;">
+<span id="wb_uid8">Parameters:</span></div>
+<div id="wb_objCheckbox">
+<input type="checkbox" id="objCheckbox" name="Checkbox2" value="on"><label for="objCheckbox"></label></div>
+<div id="wb_gltfCheckbox">
+<input type="checkbox" id="gltfCheckbox" name="Checkbox3" value="on"><label for="gltfCheckbox"></label></div>
+<div id="wb_glbCheckbox">
+<input type="checkbox" id="glbCheckbox" name="Checkbox4" value="on"><label for="glbCheckbox"></label></div>
+<div id="wb_usdzCheckbox">
+<input type="checkbox" id="usdzCheckbox" name="Checkbox5" value="on"><label for="usdzCheckbox"></label></div>
+<div id="wb_qualityJPEGTxt" onclick="apply_blender_conv('OBJ');return false;">
+<span id="wb_uid9">Quality:</span></div>
+<input type="number" id="JPEGQuality" onkeyup="validateGlassTransparencyValue();return false;" name="JPEGQualityTextBox" value="80" maxlength="3" spellcheck="false">
+<div id="wb_shadowPlaneCheckbox">
+<input type="checkbox" id="shadowPlaneCheckbox" name="Checkbox6" value="on"><label for="shadowPlaneCheckbox"></label></div>
+<div id="wb_shadowPlaneTxt" onclick="apply_blender_conv('OBJ');return false;">
+<span id="wb_uid10">Remove Shadow Plane</span></div>
+<input type="submit" id="ConvertBtn" onclick="ConvertFileBtnClicked();return false;" name="ConvertBtn" value="Convert file">
+<input type="submit" id="FileInputBtn" onclick="ChooseFileClicked();return false;" name="ChooseFileBtn" value="Choose Input File">
+<div id="wb_glassTranspCheckbox">
+<input type="checkbox" id="glassTranspCheckbox" name="Checkbox1" value="on"><label for="glassTranspCheckbox"></label></div>
+<div id="wb_glassTransparencyTxt" onclick="apply_blender_conv('OBJ');return false;">
+<span id="wb_uid11">Overwrite Glass transparency</span></div>
+<div id="wb_alphaTxt" onclick="apply_blender_conv('OBJ');return false;">
+<span id="wb_uid12">Alpha:</span></div>
+<input type="number" id="alphaGlassEditbox" name="JPEGQualityTextBox" value="0.5" maxlength="3" spellcheck="false">
+
+
+<div id="FileUpload" class="input-group">
+<input class="form-control" type="text" readonly="" placeholder="Choose a File as Input...">
+<label class="input-group-btn">
+<input type="file" name="FileUpload1" id="FileUpload-file"><span class="btn">Choose Input File</span>
+</label>
+</div>
+<!-- div_browser_fileinput -->
+<!--<div id="browser-bak" ></div>-->
+<div id="wb_VersionNumberText" onclick="apply_blender_conv('OBJ');return false;">
+<span id="wb_uid13">V1.0</span></div>
+<div id="wb_">
+<img src="images/img0006.png" id="" alt=""></div>
+<input type="text" id="FolderOutputBox" onkeypress="validateInputPath(event);return false;" name="FileInputBox" value="" spellcheck="false" placeholder="Choose a File as Input...">
+<div id="wb_Text1">
+<span id="wb_uid14">Output Folder:</span></div>
+<input type="submit" id="FolderOutputBtn" onclick="ChooseFolderOutputClicked();return false;" name="ChooseFileBtn" value="Choose Output Folder">
+</body>
+</html>
