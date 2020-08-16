@@ -6,7 +6,7 @@
 
 # How to use
 C3D is a 3D file format converter.
-To run it, double-click on ##C3D_V1_0.exe##
+To run it, double-click on **C3D_V1_0.exe**
 C3D can take some times to fully display.
 
 It takes .FBX files as inputs, and outputs either .GLB, .GLTF, .USDZ or .OBJ
@@ -31,13 +31,13 @@ In the output folder, a new folder, per file format, is going to be created, hos
 
 # How is it created
 The GUI of the app is written in HTML.
-The HTML app is then integrated with a Python module, ##eel##, as an single .exe file. 
+The HTML app is then integrated with a Python module, **eel**, as an single .exe file. 
 Behind the scene, C3D call [Blender](https://www.blender.org/) to operates on the 3D files.
 A python file (`fbx_2_other.py`) specify the various actions that Blender will apply on the 3D model.
 
 [FBX2GLTF](https://github.com/facebookincubator/FBX2glTF) is used to convert FBX files to GLTF.
 
-[USDZCONVERT_Windows] (https://github.com/tappi287/usdzconvert_windows) is used to convert GLB files to USDZ.
+[USDZCONVERT_Windows](https://github.com/tappi287/usdzconvert_windows) is used to convert GLB files to USDZ.
 
 [glTF-Shell-Extensions](https://github.com/Pseudopode/glTF-Shell-Extensions) is used, in its command line variant, to Pack and Unpack GLTF/GLB files.
 
@@ -53,13 +53,18 @@ If you want to try the app without the command line as visible, you can click on
 # Hierarchy
 [TO DO]
 'C3D-root'/: source code + batch files + fbx_2_other.py (to copy to the 'dist' folder)
+
 ./web/: html + images + js + CSS
+
 ./dist/: C3D_V1_0.exe + fbx_2_other.py + Newtonsoft.Json.dll + gltf.exe + gltfpack.exe
+
 ./dist/pxr_usd_min_alembic1710_py27_win64/: USDZConvert
-./dist/blender_281: contain a 'standard' Blender unzipped distribution. ##YOU NEED TO UNPACK ONE BLENDER DISTRIBUTION HERE, TO MAKE C3D WORKS!##
+
+./dist/blender_281: contain a 'standard' Blender unzipped distribution. **YOU NEED TO UNPACK ONE BLENDER DISTRIBUTION HERE, TO MAKE C3D WORKS!**
 
 # JSON documentation
 To exchange commands, the C3D app is using a JSON file, passed on the command line to Blender.
+
 IF you don't want to use the GUI of C3D, you can still pass a JSON string manually.
 
 [TO DO] : document the JSON string.
