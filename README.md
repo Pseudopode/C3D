@@ -2,7 +2,7 @@
 3D File Format Converter
 ##DON'T USE THIS APP IN PRODUCTION YET, IT'S NOT PROPERLY TESTED!
 
-!(./Documentation/title_screen.jpg)
+![Title Screen](./Documentation/title_screen.jpg "")
 
 # How to use
 C3D is a 3D file format converter.
@@ -27,7 +27,7 @@ When everything is set, you can click on *Convert file*.
 
 In the output folder, a new folder, per file format, is going to be created, hosting the converted file.
 
-!(./Documentation/output_folder.jpg)
+![Output Folder](./Documentation/output_folder.jpg "")
 
 # How is it created
 The GUI of the app is written in HTML.
