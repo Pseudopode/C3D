@@ -1,6 +1,6 @@
 # C3D - V0.2 - Alpha
 3D File Format Converter
-##DON'T USE THIS APP IN PRODUCTION YET, IT'S NOT PROPERLY TESTED!
+**DON'T USE THIS APP IN PRODUCTION YET, IT'S NOT PROPERLY TESTED!**
 
 ![Title Screen](./Documentation/title_screen.jpg "")
 
