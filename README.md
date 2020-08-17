@@ -1,8 +1,11 @@
-# C3D - V0.2 - Alpha
+# C3D - V0.6 - Alpha
 3D File Format Converter
 **DON'T USE THIS APP IN PRODUCTION YET, IT'S NOT PROPERLY TESTED!**
 
 ![Title Screen](./Documentation/title_screen.jpg "")
+
+# Log
+0.6 - Corrected the possibility to createz USDZ files on system where there is a space in the folder hierarchy.
 
 # How to use
 C3D is a 3D file format converter.

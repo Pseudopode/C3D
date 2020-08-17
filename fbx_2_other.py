@@ -1203,12 +1203,12 @@ def exportUSDZ(convertConfig,output_model,input_filename_without_ext,finalGLBexp
 	#bpy.ops.export_scene.obj(filepath=output_model)
 
 		
-	current_exe_folder = current_exe_folder.replace(" ", "\ ")
+	#current_exe_folder = current_exe_folder.replace(" ", "\ ")
 	print('current_exe_folder: ' + current_exe_folder)
 	#output_model = input_filename_without_ext + ".glb"
 	print('output_model: ' + output_model)
 	
-	os_str_cmd = current_exe_folder + '\\pxr_usd_min_alembic1710_py27_win64\\run_usdzconvert.cmd' + ' ' +  "\"" + output_model +  "\""
+	os_str_cmd = "\"" + current_exe_folder + '\\pxr_usd_min_alembic1710_py27_win64\\run_usdzconvert.cmd' + "\"" + ' ' +  "\"" + output_model +  "\""
 	print('Converting to USDZ: ' + os_str_cmd)
 	execute_cmd(os_str_cmd)
 	shutil.move(output_model.replace('.glb','.usdz'),out_USDZ_folder)
